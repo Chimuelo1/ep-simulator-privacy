@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy · EP Simulator</title>
+  <style>
+    :root{color-scheme:dark}
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:#071014;color:#eaf2f5;margin:0;padding:24px;line-height:1.55}
+    main{max-width:860px;margin:auto}
+    h1,h2{color:#74e9ff}
+    a{color:#74e9ff}
+    .box{border:1px solid #29434d;border-radius:10px;padding:14px;background:#0c171c}
+    .topbar{display:flex;gap:10px;justify-content:space-between;align-items:center;flex-wrap:wrap;margin-bottom:18px}
+    .lang{display:flex;gap:8px}
+    button{background:#12323c;color:white;border:1px solid #3b6572;border-radius:7px;padding:10px 14px;cursor:pointer}
+    button.active{background:#1d5668;border-color:#74e9ff}
+    [data-lang]{display:none}
+    [data-lang].active{display:block}
+    .muted{color:#a9bbc2}
+  </style>
+</head>
+<body>
+<main>
+  <div class="topbar">
+    <button onclick="history.back()">← Back / Volver</button>
+    <div class="lang" aria-label="Language selector">
+      <button id="btn-es" class="active" onclick="setLang('es')">Español</button>
+      <button id="btn-en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+
+  <section data-lang="es" class="active">
+    <h1>Política de privacidad de EP Simulator</h1>
+    <p><b>Última actualización:</b> 25 de septiembre de 2026.</p>
+
+    <div class="box">
+      <p>EP Simulator es una herramienta educativa de Bobilab que utiliza únicamente señales y pacientes sintéticos. La aplicación no está diseñada para trabajar con datos de pacientes reales.</p>
+    </div>
+
+    <h2>Datos que recopilamos</h2>
+    <p>La aplicación no solicita una cuenta, no contiene publicidad, no integra analítica ni telemetría y no transmite información a Bobilab ni a terceros. La versión Android está diseñada para funcionar sin permiso de Internet.</p>
+
+    <h2>Datos almacenados en el dispositivo</h2>
+    <p>La aplicación puede guardar localmente en el WebView una preferencia técnica, por ejemplo que el usuario ya aceptó el aviso educativo. Ese dato permanece en el dispositivo y no se transmite.</p>
+
+    <h2>Datos médicos o de salud</h2>
+    <p>EP Simulator no solicita, registra ni procesa datos personales de salud. Todos los casos, electrogramas, ECG, parámetros y resultados son sintéticos.</p>
+
+    <h2>Uso médico</h2>
+    <p>EP Simulator no es un dispositivo médico y no sirve para diagnosticar, tratar, curar ni prevenir ninguna afección médica. No debe utilizarse para tomar decisiones sobre pacientes reales. Para asesoramiento, diagnóstico o tratamiento médico debe consultarse a un profesional sanitario cualificado.</p>
+
+    <h2>Menores</h2>
+    <p>La aplicación está dirigida a profesionales sanitarios y personas adultas en formación. No está diseñada para niños.</p>
+
+    <h2>Contacto</h2>
+    <p>Correo de soporte de Bobilab: <b>bobilab934@gmail.com</b>.</p>
+  </section>
+
+  <section data-lang="en">
+    <h1>EP Simulator Privacy Policy</h1>
+    <p><b>Last updated:</b> September 25, 2026.</p>
+
+    <div class="box">
+      <p>EP Simulator is an educational tool by Bobilab that uses only synthetic signals and simulated patients. The application is not designed to work with real patient data.</p>
+    </div>
+
+    <h2>Data we collect</h2>
+    <p>The application does not require an account, does not contain advertising, does not integrate analytics or telemetry, and does not transmit information to Bobilab or third parties. The Android version is designed to operate without Internet permission.</p>
+
+    <h2>Data stored on the device</h2>
+    <p>The application may store a technical preference locally in the WebView, for example whether the user has already accepted the educational notice. This information remains on the device and is not transmitted.</p>
+
+    <h2>Medical or health data</h2>
+    <p>EP Simulator does not request, record, or process personal health information. All cases, electrograms, ECGs, parameters, and results are synthetic.</p>
+
+    <h2>Medical use</h2>
+    <p>EP Simulator is not a medical device and is not intended to diagnose, treat, cure, or prevent any medical condition. It must not be used to make decisions about real patients. For medical advice, diagnosis, or treatment, users should consult a qualified healthcare professional.</p>
+
+    <h2>Children</h2>
+    <p>The application is intended for healthcare professionals and adults in training. It is not designed for children.</p>
+
+    <h2>Contact</h2>
+    <p>Bobilab support email: <b>bobilab934@gmail.com</b>.</p>
+  </section>
+
+  <p class="muted">EP Simulator · Bobilab</p>
+</main>
+<script>
+  function setLang(lang){
+    document.documentElement.lang = lang;
+    document.querySelectorAll('[data-lang]').forEach(el=>el.classList.toggle('active', el.dataset.lang===lang));
+    document.getElementById('btn-es').classList.toggle('active', lang==='es');
+    document.getElementById('btn-en').classList.toggle('active', lang==='en');
+  }
+</script>
+</body>
+</html>
